@@ -16,12 +16,14 @@ module Players
     
     def move(board)
     #puts "Which cell would you like to pick?"
-      if board.cells.all? {|cell| cell == " "}
-        input = ["1", "2", "3", "4", "5", "6", "7", "8", "9"].sample
-      else
+        if board.turn_count % 2 == 0
+          filled_cells = []
+        filled_cells = board.cells.each_with_index.map {|cell,i| cell == "X" ? i+1 : nil}
+        else
         filled_cells = []
+        filled_cells = board.cells.each_with_index.map {|cell,i| cell == "O" ? i+1 : nil}
+        end
         
-         filled_cells = board.cells.each_with_index.map {|cell,i| cell == "X" ? i+1 : nil}
         filled_cells = filled_cells.map(&:to_s)
         
         temp_array = []
@@ -43,7 +45,7 @@ module Players
           input = input_array.sample
         end
         
-      end
+      
     end
     
   end
