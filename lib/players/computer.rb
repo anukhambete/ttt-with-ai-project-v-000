@@ -19,6 +19,12 @@ module Players
       if board.cells.all? {|cell| cell == " "}
         input = ["1", "2", "3", "4", "5", "6", "7", "8", "9"].sample
       else
+        # filled_cells = board.cells.all? {|cell| cell == "X"}
+        #temp_array = []
+        #WIN_ARR.each do |wa|
+        #if wa.include? (" xxxxxx")
+        #wa.each do |element|
+        #temp_array << element
         input = ["1", "2", "3", "4", "5", "6", "7", "8", "9"].sample
       end
     end
