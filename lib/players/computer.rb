@@ -19,27 +19,29 @@ module Players
       if board.cells.all? {|cell| cell == " "}
         input = ["1", "2", "3", "4", "5", "6", "7", "8", "9"].sample
       else
-        #filled_cells = []
-        # filled_cells = board.cells.each_with_index.map {|cell,i| cell == "X" ? i+1 : nil}
-        #filled_cells = filled_cells.map(&:to_s)
+        filled_cells = []
+         filled_cells = board.cells.each_with_index.map {|cell,i| cell == "X" ? i+1 : nil}
+        filled_cells = filled_cells.map(&:to_s)
         
-        #temp_array = []
-        #input_array = []
-        #random = filled_cells.sample
+        temp_array = []
+        input_array = []
+        random = filled_cells.sample
         
-        #WIN_ARR.each do |wa|
-        #if wa.include? (random)
-        #wa.each do |element|
-        #temp_array << element
-        #end
-        #end
-        #end
-        #input_array = temp_array - filled_cells
-        #if input_array .empty
+        WIN_ARR.each do |wa|
+          if wa.include? (random)
+          wa.each do |element|
+          temp_array << element
+            end
+          end
+        end
         
-        input = ["1", "2", "3", "4", "5", "6", "7", "8", "9"].sample
-        #else
-        #input = input_array.sample
+        input_array = temp_array - filled_cells
+        if input_array .empty
+          input = ["1", "2", "3", "4", "5", "6", "7", "8", "9"].sample
+        else
+          input = input_array.sample
+        end
+        
       end
     end
     
