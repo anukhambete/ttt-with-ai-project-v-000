@@ -21,7 +21,7 @@ module Players
         filled_cells = board.cells.each_with_index.map {|cell,i| cell == "X" ? i+1 : nil}
         else
         filled_cells = []
-        filled_cells = board.cells.each_with_index.map {|cell,i| cell == "O" ? i+1 : nil}
+        filled_cells = board.cells.each_with_index.map {|cell,i| cell == "O" ? i + 1 : nil}
         end
         
         filled_cells = filled_cells.map(&:to_s)
@@ -44,7 +44,6 @@ module Players
         else
           input = input_array.sample
         end
-        
       
     end
     
