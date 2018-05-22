@@ -22,19 +22,24 @@ module Players
         #filled_cells = []
         # filled_cells = board.cells.each_with_index.map {|cell,i| cell == "X" ? i+1 : nil}
         #filled_cells = filled_cells.map(&:to_s)
+        
         #temp_array = []
         #input_array = []
+        
         #WIN_ARR.each do |wa|
-        #if wa.include? (" xxxxxx")
+        #random = filled_cells.sample
+        #if wa.include? (random)
         #wa.each do |element|
         #temp_array << element
         #end
         #end
         #end
         #input_array = temp_array - filled_cells
-        #if input_array 
+        #if input_array .empty
         
         input = ["1", "2", "3", "4", "5", "6", "7", "8", "9"].sample
+        #else
+        #input = input_array.sample
       end
     end
     
