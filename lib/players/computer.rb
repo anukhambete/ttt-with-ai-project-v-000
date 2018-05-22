@@ -25,9 +25,9 @@ module Players
         
         #temp_array = []
         #input_array = []
+        #random = filled_cells.sample
         
         #WIN_ARR.each do |wa|
-        #random = filled_cells.sample
         #if wa.include? (random)
         #wa.each do |element|
         #temp_array << element
