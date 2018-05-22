@@ -36,7 +36,7 @@ module Players
         end
         
         input_array = temp_array - filled_cells
-        if input_array .empty
+        if input_array.empty?
           input = ["1", "2", "3", "4", "5", "6", "7", "8", "9"].sample
         else
           input = input_array.sample
