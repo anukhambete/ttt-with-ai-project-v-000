@@ -21,7 +21,7 @@ module Players
       else
         #filled_cells = []
         # filled_cells = board.cells.each_with_index.map {|cell,i| cell == "X" ? i+1 : nil}
-        #filled_cells = 
+        #filled_cells = filled_cells.map(&:to_s)
         #temp_array = []
         #WIN_ARR.each do |wa|
         #if wa.include? (" xxxxxx")
