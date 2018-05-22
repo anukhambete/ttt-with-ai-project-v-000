@@ -20,6 +20,7 @@ module Players
         input = ["1", "2", "3", "4", "5", "6", "7", "8", "9"].sample
       else
         filled_cells = []
+        
          filled_cells = board.cells.each_with_index.map {|cell,i| cell == "X" ? i+1 : nil}
         filled_cells = filled_cells.map(&:to_s)
         
